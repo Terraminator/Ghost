@@ -3,6 +3,7 @@ import threading
 import sys
 import ssl
 import os
+import certifi
 
 class Proxy:
 
@@ -30,6 +31,7 @@ class Proxy:
 		client_socket.send(b"HTTP/1.1 200 Established\r\n\r\n")
 		while True:
 			#try:
+			packet = ""
 			packet = client_socket.recv(4096)
 			if packet != b'':
 				packet = self.filter_packet(packet)
@@ -75,7 +77,7 @@ class Proxy:
 		ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
 		ctx.verify_mode=ssl.CERT_REQUIRED
 		ctx.check_hostname=True
-		ctx.load_verify_locations("..\\certs\\ca-bundle.crt")
+		ctx.load_verify_locations("../certs/ca-bundle.pem") #https://letsencrypt.org/certificates/
 		rc = ctx.wrap_socket(rc, server_hostname=str(host))
 		rc.connect((str(host), 443))
 		cert = rc.getpeercert()
