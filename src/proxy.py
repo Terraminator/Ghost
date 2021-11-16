@@ -71,7 +71,7 @@ class Proxy:
 		
 	def connect(self, packet):
 		host, port = self.get_host(packet)
-		rc = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+		rc = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 		#rc.connect((socket.gethostbyname(host), int(port)))
 		ctx = ssl.create_default_context()
 		ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
