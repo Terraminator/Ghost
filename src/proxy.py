@@ -75,7 +75,7 @@ class Proxy:
 		ctx = ssl.SSLContext(ssl.PROTOCOL_SSLv23)
 		ctx.verify_mode=ssl.CERT_REQUIRED
 		ctx.check_hostname=True
-		ctx.load_verify_locations("C:\\Users\\Erik\\Desktop\\Projekt\\GHOST\\certs\\ca-bundle.crt")
+		ctx.load_verify_locations("..\\certs\\ca-bundle.crt")
 		rc = ctx.wrap_socket(rc, server_hostname=str(host))
 		rc.connect((str(host), 443))
 		cert = rc.getpeercert()
