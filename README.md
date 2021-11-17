@@ -12,7 +12,7 @@
 </pre>
 This is a proxy server in Python wich filters your traffic.
 
-# Dev
+# Status
 This Software is not released yet!  
 
 ### Setup
