@@ -12,8 +12,6 @@
 </pre>
 This is a http proxy written in Python wich can block malicious domains
 
-# Status
-This Software is not released yet!  
 
 ### Setup
 You just have to install a Python version >= 3 and run <pre> python3 ghost.py</pre>
