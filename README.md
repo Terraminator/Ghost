@@ -17,7 +17,8 @@ This is a http proxy written in Python wich can block malicious domains
 You just have to install a Python version >= 3 and run <pre> python3 ghost.py</pre>
 then you have to configure your application to connect to the following http proxy:  
 <pre> ip=127.0.0.1, port=8080 </pre>  
-If you want to block telemetry/mal domains you need to add domains to blacklist.txt
+you can also force an application to use this proxy using proxychains  
+If you want to block telemetry/mal/ad domains you need to add domains to blacklist.txt
 
 ### Ascii Art  
 The Ascii Art is made with: https://patorjk.com/software/taag/
