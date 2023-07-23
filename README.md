@@ -10,7 +10,7 @@
                                                          
                                                                                                                       
 </pre>
-This is a http proxy written in Python wich can block malicious domains
+This is a http proxy written in Python which can block malicious domains
 
 
 ### Setup
