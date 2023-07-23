@@ -9,8 +9,11 @@ SRV_PORT=8080
 
 threads=[]
 
-with open("blacklist.txt", "r") as f:
-	blacklist=f.read()
+try:
+	with open("blacklist.txt", "r") as f:
+		blacklist=f.read()
+except:
+	blacklist=""
 
 def filter_in(data):
 	#if data!=b"": print(b"in:", data)
